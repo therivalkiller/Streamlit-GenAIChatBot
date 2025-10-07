@@ -83,7 +83,7 @@ render_session_header(current_meta, current_id)
 render_chat_messages(current_meta["messages"])
 
 # Model selector and chat input
-col_model, col_input = st.columns([1, 3])
+col_model, col_input = st.columns([2, 3])
 
 with col_model:
     st.session_state.selected_model = render_model_selector(st.session_state.selected_model)
