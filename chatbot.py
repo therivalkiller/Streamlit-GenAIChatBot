@@ -20,6 +20,21 @@ load_dotenv()
 
 # Page configuration
 st.set_page_config(page_title="Chatbot", page_icon="🤖", layout="centered")
+# Hide Streamlit's default menu and footer
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stAppDeployButton {display: none;}
+    .stToolbar {display: none;}
+    .stDecoration {display: none;}
+    .viewerBadge_container__1QSob {display: none !important;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 st.title("💬 Generative AI Chatbot")
 
 # Initialize database
